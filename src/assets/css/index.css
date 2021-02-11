@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
+/* core */
+body {
+  margin: 0;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a:link {
+  color: #0098ff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0098ff;
+  background-color: transparent;
+  text-decoration: none;
+}
