@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sistic-react-sample/static/css/main.b010ba83.chunk.css",
+    "main.js": "/sistic-react-sample/static/js/main.db4c1e7e.chunk.js",
+    "main.js.map": "/sistic-react-sample/static/js/main.db4c1e7e.chunk.js.map",
+    "runtime-main.js": "/sistic-react-sample/static/js/runtime-main.4d969346.js",
+    "runtime-main.js.map": "/sistic-react-sample/static/js/runtime-main.4d969346.js.map",
+    "static/css/2.ea11fe1c.chunk.css": "/sistic-react-sample/static/css/2.ea11fe1c.chunk.css",
+    "static/js/2.83df4d31.chunk.js": "/sistic-react-sample/static/js/2.83df4d31.chunk.js",
+    "static/js/2.83df4d31.chunk.js.map": "/sistic-react-sample/static/js/2.83df4d31.chunk.js.map",
+    "index.html": "/sistic-react-sample/index.html",
+    "static/css/2.ea11fe1c.chunk.css.map": "/sistic-react-sample/static/css/2.ea11fe1c.chunk.css.map",
+    "static/css/main.b010ba83.chunk.css.map": "/sistic-react-sample/static/css/main.b010ba83.chunk.css.map",
+    "static/js/2.83df4d31.chunk.js.LICENSE.txt": "/sistic-react-sample/static/js/2.83df4d31.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d969346.js",
+    "static/css/2.ea11fe1c.chunk.css",
+    "static/js/2.83df4d31.chunk.js",
+    "static/css/main.b010ba83.chunk.css",
+    "static/js/main.db4c1e7e.chunk.js"
+  ]
+}
