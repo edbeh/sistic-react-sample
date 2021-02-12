@@ -1,6 +1,6 @@
 # Disclaimer
 
-This react application was created as a demo for sistic event booking page.\
+This react application was created just as a demo for sistic event booking page.\
 All information shown in this app is publicly available.
 
 ## View Demo Application
