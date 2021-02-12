@@ -50,7 +50,7 @@ const EventSummary = ({ event }) => {
           {event.seatmap && (
             <div className='summary-item'>
               <EventSeatOutlinedIcon /> <div className='spacer' />{' '}
-              <a href='#'>{event.seatmap}</a>
+              <a href='/'>{event.seatmap}</a>
             </div>
           )}
           {event.price && event.price.standard && (

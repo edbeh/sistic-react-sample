@@ -239,4 +239,13 @@
   .navbar > .top-header > .top-header-right > .MuiButtonGroup-root > button {
     font-size: 0.7em;
   }
+
+  /* event details */
+  .accordions-container > .left-accordions > .accordions {
+    margin: 0px;
+  }
+
+  .accordions-container > .right-accordions > .accordions {
+    margin: 0px;
+  }
 }

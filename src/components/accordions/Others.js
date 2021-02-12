@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -36,6 +37,11 @@ const Others = ({ title, content }) => {
       </Accordion>
     </div>
   )
+}
+
+Others.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 }
 
 export default Others

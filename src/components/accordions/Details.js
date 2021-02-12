@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -24,7 +25,6 @@ const Details = ({ details }) => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content} component='div'>
-            {/* <div> */}
             <p>
               <strong>Start Sales Date:</strong>
             </p>
@@ -72,12 +72,15 @@ const Details = ({ details }) => {
                 </p>
               </>
             )}
-            {/* </div> */}
           </Typography>
         </AccordionDetails>
       </Accordion>
     </div>
   )
+}
+
+Details.propTypes = {
+  details: PropTypes.object.isRequired,
 }
 
 export default Details
