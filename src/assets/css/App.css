@@ -1,6 +1,5 @@
 /* top navigation area */
 .navbar {
-  /* height: 100px; */
   background-color: #373e45;
 }
 
@@ -9,7 +8,6 @@
   justify-content: space-between;
   padding-top: 8px;
   padding-bottom: 8px;
-  /* height: 50px; */
 }
 
 .navbar > .top-header > .top-header-left {
@@ -59,6 +57,7 @@
 
 .image-gallery {
   flex-basis: 66.6%;
+  max-width: 66.6%;
 }
 
 .image-gallery-slides {
@@ -130,6 +129,7 @@
 
 .event-information > .buy-tickets {
   height: 55px;
+  text-align: center;
 }
 
 /* event details */
@@ -189,6 +189,10 @@
     text-align: center;
   }
 
+  .image-gallery {
+    max-width: 100%;
+  }
+
   .image-gallery-slides {
     min-height: 100px;
   }
@@ -238,5 +242,14 @@
 
   .navbar > .top-header > .top-header-right > .MuiButtonGroup-root > button {
     font-size: 0.7em;
+  }
+
+  /* event details */
+  .accordions-container > .left-accordions > .accordions {
+    margin: 0px;
+  }
+
+  .accordions-container > .right-accordions > .accordions {
+    margin: 0px;
   }
 }

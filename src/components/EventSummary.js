@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     background: '#138BE7',
     borderRadius: '0',
-    width: '90%',
+    width: '80%',
   },
   label: {
     fontFamily: 'Rubik',
@@ -50,7 +50,7 @@ const EventSummary = ({ event }) => {
           {event.seatmap && (
             <div className='summary-item'>
               <EventSeatOutlinedIcon /> <div className='spacer' />{' '}
-              <a href='#'>{event.seatmap}</a>
+              <a href='/'>{event.seatmap}</a>
             </div>
           )}
           {event.price && event.price.standard && (

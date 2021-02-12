@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Carousel from './Carousel'
 import EventSummary from './EventSummary'
@@ -10,6 +11,10 @@ const Hero = ({ event }) => {
       <EventSummary event={event} />
     </div>
   )
+}
+
+Hero.propTypes = {
+  event: PropTypes.object.isRequired,
 }
 
 export default Hero

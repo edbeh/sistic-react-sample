@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Synopsis from './Synopsis'
 import Details from './Details'
@@ -37,6 +38,10 @@ const AccordionsContainer = ({ event }) => {
       </div>
     </div>
   )
+}
+
+AccordionsContainer.propTypes = {
+  event: PropTypes.object.isRequired,
 }
 
 export default AccordionsContainer

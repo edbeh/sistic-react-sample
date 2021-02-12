@@ -5,17 +5,18 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 const ScrollUpButton = () => {
   return (
     <ScrollToTop
+      className='scroll-up-button'
       showUnder={160}
       style={{
         borderRadius: '50%',
         background: '#0098ff',
-        width: '50px',
-        height: '50px',
+        width: '40px',
+        height: '40px',
         color: '#fff',
         zIndex: '1',
       }}
     >
-      <ExpandLessIcon style={{ height: '50px', width: '50px' }} />
+      <ExpandLessIcon style={{ height: '40px', width: '40px' }} />
     </ScrollToTop>
   )
 }

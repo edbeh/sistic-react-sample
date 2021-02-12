@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
-import Link from '@material-ui/core/Link'
 import KeyboardArrowLeftOutlinedIcon from '@material-ui/icons/KeyboardArrowLeftOutlined'
 import KeyboardArrowRightOutlinedIcon from '@material-ui/icons/KeyboardArrowRightOutlined'
 
@@ -13,7 +13,7 @@ const Nav = ({ prev, next, handleNavigate }) => {
     <div className='navbar'>
       <div className='top-header'>
         <div className='top-header-left'>
-          <img src={logo} />
+          <img src={logo} alt='logo' />
           <SearchBar />
         </div>
         <div className='top-header-right'>
@@ -24,7 +24,7 @@ const Nav = ({ prev, next, handleNavigate }) => {
               disabled={!prev}
               onClick={() => handleNavigate(prev)}
             >
-              Previous
+              Prev
             </Button>
             <Button
               endIcon={<KeyboardArrowRightOutlinedIcon />}
@@ -41,16 +41,16 @@ const Nav = ({ prev, next, handleNavigate }) => {
         <div className='bottom-header-left'>
           <ul>
             <li>
-              <a href='#'>Events</a>
+              <a href='/'>Events</a>
             </li>
             <li>
-              <a href='#'>Attractions</a>
+              <a href='/'>Attractions</a>
             </li>
             <li>
-              <a href='#'>Promotions</a>
+              <a href='/'>Promotions</a>
             </li>
             <li>
-              <a href='#'>Explore</a>
+              <a href='/'>Explore</a>
             </li>
           </ul>
         </div>
@@ -60,6 +60,12 @@ const Nav = ({ prev, next, handleNavigate }) => {
       </div>
     </div>
   )
+}
+
+Nav.propTypes = {
+  prev: PropTypes.string,
+  next: PropTypes.string,
+  handleNavigate: PropTypes.func.isRequired,
 }
 
 export default Nav

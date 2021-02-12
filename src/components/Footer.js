@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <div className='footer-container'>
       <div>
-        <img src={logo} />
+        <img src={logo} alt='logo' />
       </div>
       <div>
         <p>Copyright 1998 - 2021. © SISTIC.com Pte Ltd</p>
       </div>
       <div>
-        <a href='#'>Privacy Policy</a> | <a href='#'>Terms & Conditions</a>
+        <a href='/'>Privacy Policy</a> | <a href='/'>Terms & Conditions</a>
       </div>
       <div>
         <p>SISTIC Hotline: +65 63485555</p>
