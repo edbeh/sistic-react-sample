@@ -41,16 +41,16 @@ const Nav = ({ prev, next, handleNavigate }) => {
         <div className='bottom-header-left'>
           <ul>
             <li>
-              <a href='/'>Events</a>
+              <a href='/sistic-react-sample/'>Events</a>
             </li>
             <li>
-              <a href='/'>Attractions</a>
+              <a href='/sistic-react-sample/'>Attractions</a>
             </li>
             <li>
-              <a href='/'>Promotions</a>
+              <a href='/sistic-react-sample/'>Promotions</a>
             </li>
             <li>
-              <a href='/'>Explore</a>
+              <a href='/sistic-react-sample/'>Explore</a>
             </li>
           </ul>
         </div>
