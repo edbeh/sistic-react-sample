@@ -14,12 +14,15 @@ import '../assets/css/App.css'
 
 const App = () => {
   const event = useSelector((state) => state.eventReducer.event)
+  const error = useSelector((state) => state.eventReducer.error)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchEvent())
     // eslint-disable-next-line
   }, [])
+
+  if (error) return <div>An error has occured: {error}</div>
 
   if (!event)
     return <Loading loading={true} background='#fff' loaderColor='#3498db' />
