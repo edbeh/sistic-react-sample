@@ -9,5 +9,9 @@ Use this link to view the demo app: https://edbeh.github.io/sistic-react-sample/
 
 ## View Redux Code
 
+<<<<<<< HEAD
 A branch with Redux and Redux Thunk integration is available here:\
 https://github.com/edbeh/sistic-react-sample/tree/feature/redux-integration
+=======
+A branch with Redux and Redux Thunk integration is available here: https://github.com/edbeh/sistic-react-sample/tree/feature/redux-integration
+>>>>>>> 9b1f284213944d449844051ac1b758f2806baf52
