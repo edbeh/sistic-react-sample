@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 
 import Synopsis from './Synopsis'
 import Details from './Details'
@@ -9,15 +9,15 @@ import Others from './Others'
 
 import { toTitleCase } from '../../utils/toTitleCase'
 
-const AccordionsContainer = ({ event }) => {
+const AccordionsContainer = () => {
+  const event = useSelector((state) => state.eventReducer.event)
+
   return (
     <div className='accordions-container'>
       <div className='left-accordions'>
-        {event.synopsis && <Synopsis content={event.synopsis} />}
-        {event.details && <Details details={event.details} />}
-        {event.admission_rules && (
-          <AdmissionRules admissionRules={event.admission_rules} />
-        )}
+        {event.synopsis && <Synopsis />}
+        {event.details && <Details />}
+        {event.admission_rules && <AdmissionRules />}
         {event.others &&
           event.others.map((item, i) => {
             return Object.entries(item).map(([title, content]) => {
@@ -32,16 +32,10 @@ const AccordionsContainer = ({ event }) => {
           })}
       </div>
       <div className='right-accordions'>
-        {event.price && event.price.standard && (
-          <PriceDetails priceDetails={event.price} />
-        )}
+        {event.price && event.price.standard && <PriceDetails />}
       </div>
     </div>
   )
-}
-
-AccordionsContainer.propTypes = {
-  event: PropTypes.object.isRequired,
 }
 
 export default AccordionsContainer

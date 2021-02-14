@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -9,8 +9,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { useStyles } from './accordionStyles'
 import { formatISODate } from '../../utils/parseDate'
 
-const Details = ({ details }) => {
+const Details = () => {
   const classes = useStyles()
+  const details = useSelector((state) => state.eventReducer.event.details)
 
   return (
     <div className='accordions'>
@@ -77,10 +78,6 @@ const Details = ({ details }) => {
       </Accordion>
     </div>
   )
-}
-
-Details.propTypes = {
-  details: PropTypes.object.isRequired,
 }
 
 export default Details

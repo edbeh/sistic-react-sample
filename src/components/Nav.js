@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useSelector, useDispatch } from 'react-redux'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Button from '@material-ui/core/Button'
 import KeyboardArrowLeftOutlinedIcon from '@material-ui/icons/KeyboardArrowLeftOutlined'
@@ -7,8 +7,13 @@ import KeyboardArrowRightOutlinedIcon from '@material-ui/icons/KeyboardArrowRigh
 
 import SearchBar from './SearchBar'
 import logo from '../assets/images/sistic-logo.png'
+import { fetchEvent } from '../eventActions'
 
-const Nav = ({ prev, next, handleNavigate }) => {
+const Nav = () => {
+  const prev = useSelector((state) => state.eventReducer.event.prev)
+  const next = useSelector((state) => state.eventReducer.event.next)
+  const dispatch = useDispatch()
+
   return (
     <div className='navbar'>
       <div className='top-header'>
@@ -22,7 +27,7 @@ const Nav = ({ prev, next, handleNavigate }) => {
               startIcon={<KeyboardArrowLeftOutlinedIcon />}
               color='primary'
               disabled={!prev}
-              onClick={() => handleNavigate(prev)}
+              onClick={() => dispatch(fetchEvent(prev))}
             >
               Prev
             </Button>
@@ -30,7 +35,7 @@ const Nav = ({ prev, next, handleNavigate }) => {
               endIcon={<KeyboardArrowRightOutlinedIcon />}
               color='secondary'
               disabled={!next}
-              onClick={() => handleNavigate(next)}
+              onClick={() => dispatch(fetchEvent(next))}
             >
               Next
             </Button>
@@ -60,12 +65,6 @@ const Nav = ({ prev, next, handleNavigate }) => {
       </div>
     </div>
   )
-}
-
-Nav.propTypes = {
-  prev: PropTypes.string,
-  next: PropTypes.string,
-  handleNavigate: PropTypes.func.isRequired,
 }
 
 export default Nav

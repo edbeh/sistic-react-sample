@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -8,8 +9,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { useStyles } from './accordionStyles'
 import HoverPopover from '../HoverPopover'
 
-const PriceDetails = ({ priceDetails }) => {
+const PriceDetails = () => {
   const classes = useStyles()
+  const priceDetails = useSelector((state) => state.eventReducer.event.price)
 
   return (
     <div className='accordions'>

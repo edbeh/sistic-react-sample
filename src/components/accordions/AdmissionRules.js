@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -8,8 +8,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 import { useStyles } from './accordionStyles'
 
-const AdmissionRules = ({ admissionRules }) => {
+const AdmissionRules = () => {
   const classes = useStyles()
+  const admissionRules = useSelector(
+    (state) => state.eventReducer.event.admission_rules
+  )
+
   return (
     <div className='accordions'>
       <Accordion square variant='outlined'>
@@ -48,10 +52,6 @@ const AdmissionRules = ({ admissionRules }) => {
       </Accordion>
     </div>
   )
-}
-
-AdmissionRules.propTypes = {
-  admissionRules: PropTypes.array.isRequired,
 }
 
 export default AdmissionRules

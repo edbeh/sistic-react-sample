@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -8,8 +8,10 @@ import DOMPurify from 'dompurify'
 
 import { useStyles } from './accordionStyles'
 
-const Synopsis = ({ content }) => {
+const Synopsis = () => {
   const classes = useStyles()
+
+  const content = useSelector((state) => state.eventReducer.event.synopsis)
 
   // sanitize html to prevent xss attacks
   const sanitizedHTML = DOMPurify.sanitize(content.replaceAll('\n', '<br />'), {
@@ -36,10 +38,6 @@ const Synopsis = ({ content }) => {
       </Accordion>
     </div>
   )
-}
-
-Synopsis.propTypes = {
-  content: PropTypes.string.isRequired,
 }
 
 export default Synopsis

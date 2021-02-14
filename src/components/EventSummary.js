@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import EventNoteOutlinedIcon from '@material-ui/icons/EventNoteOutlined'
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined'
 import EventSeatOutlinedIcon from '@material-ui/icons/EventSeatOutlined'
@@ -8,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import { formatISODate } from '../utils/parseDate'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     margin: '0px 20px',
     color: '#fff',
@@ -21,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const EventSummary = ({ event }) => {
+const EventSummary = () => {
+  const event = useSelector((state) => state.eventReducer.event)
+
   const classes = useStyles()
   return (
     <div className='event-information'>

@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import ImageGallery from 'react-image-gallery'
 
-const Carousel = ({ photos }) => {
+const Carousel = () => {
+  const photos = useSelector((state) => state.eventReducer.event.photos)
+
   const images = photos.map((url) => {
     return { original: url, thumbnail: url }
   })

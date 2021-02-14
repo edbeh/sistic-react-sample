@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Loading from 'react-fullscreen-loading'
-import '../assets/css/App.css'
 
 import ScrollUpButton from './ScrollUpButton'
 import Nav from './Nav'
@@ -9,27 +8,18 @@ import Hero from './Hero'
 import AccordionsContainer from './accordions/AccordionsContainer'
 import Footer from './Footer'
 
+import { fetchEvent } from '../eventActions'
+
+import '../assets/css/App.css'
+
 const App = () => {
-  const [event, setEvent] = useState(null)
+  const event = useSelector((state) => state.eventReducer.event)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    fetchUrl()
+    dispatch(fetchEvent())
+    // eslint-disable-next-line
   }, [])
-
-  const fetchUrl = (url) => {
-    const apiUrl =
-      url ||
-      'https://sistic-react-sample.s3-ap-southeast-1.amazonaws.com/apis/page1.json'
-    axios
-      .get(apiUrl)
-      .then((resp) => setEvent(resp.data))
-      .catch((err) => console.error(err))
-  }
-
-  const handleNavigate = (url) => {
-    setEvent(null)
-    fetchUrl(url)
-  }
 
   if (!event)
     return <Loading loading={true} background='#fff' loaderColor='#3498db' />
@@ -37,13 +27,9 @@ const App = () => {
   return (
     <div>
       <ScrollUpButton />
-      <Nav
-        prev={event.prev}
-        next={event.next}
-        handleNavigate={handleNavigate}
-      />
-      <Hero event={event} />
-      <AccordionsContainer event={event} />
+      <Nav />
+      <Hero />
+      <AccordionsContainer />
       <Footer />
     </div>
   )
